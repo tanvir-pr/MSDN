@@ -1,6 +1,39 @@
-@TodoApi_HostAddress = http://localhost:5191
+@TodoApi_HostAddress = https://localhost:7066
 
 GET {{TodoApi_HostAddress}}/weatherforecast/
 Accept: application/json
+
+###
+
+GET {{TodoApi_HostAddress}}/api/todoitems
+
+###
+
+POST {{TodoApi_HostAddress}}/api/todoitems
+Content-Type: application/json
+
+{
+  "name": "walk dog",
+  "isComplete": true
+}
+
+###
+
+GET {{TodoApi_HostAddress}}/api/todoitems/1
+
+###
+
+PUT {{TodoApi_HostAddress}}/api/todoitems/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "feed fish",
+  "isComplete": false
+}
+
+###
+
+DELETE {{TodoApi_HostAddress}}/api/todoitems/1
 
 ###
